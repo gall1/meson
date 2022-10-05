@@ -943,7 +943,7 @@ class Iccrl78DynamicLinker(DynamicLinker):
 
     def __init__(self, for_machine: mesonlib.MachineChoice,
                  *, version: str = 'unknown version'):
-        super().__init__(['rlink.exe'], for_machine, '', [],
+        super().__init__(['ilinkrl78.exe'], for_machine, '', [],
                          version=version)
 
     def get_accepts_rsp(self) -> bool:

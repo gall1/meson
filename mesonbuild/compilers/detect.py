@@ -222,9 +222,9 @@ def detect_static_linker(env: 'Environment', compiler: Compiler) -> StaticLinker
             return linkers.DLinker(linker, compiler.arch)
         if err.startswith('Renesas') and 'rlink' in linker_name:
             return linkers.CcrxLinker(linker)
-        if err.startswith('IAR ELF') and 'ilinkrl78' in linker_name:
+        if out.startswith('IAR ELF') and 'ilinkrl78' in linker_name:
             return linkers.Iccrl78Linker(linker)
-        if err.startswith('IAR Archive') and 'iarchive' in linker_name:
+        if out.startswith('IAR Archive') and 'iarchive' in linker_name:
             return linkers.Iccrl78Linker(linker)
         if out.startswith('GNU ar') and 'xc16-ar' in linker_name:
             return linkers.Xc16Linker(linker)

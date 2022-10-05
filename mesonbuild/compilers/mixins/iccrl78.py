@@ -118,8 +118,6 @@ class Iccrl78Compiler(Compiler):
                 continue
             elif i.startswith('-L'):
                 continue
-            #elif not i.startswith('-lib=') and i.endswith(('.a', '.lib')):
-            #    i = ''+i
             result.append(i)
         return result
 
